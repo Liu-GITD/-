@@ -1,3 +1,21 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 狂神 JavaScript
+
+# 	
+
 # 1，数据类型
 
 ## 1.1字符串
@@ -457,7 +475,11 @@ var aaa = {
 aaa.b();//调用，this指向aaa对象
 ```
 
-# 作业：
+# 
+
+# 
+
+# 百度学院作业：
 
 ## 1、实现十进制转换二进制
 
@@ -639,4 +661,87 @@ https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/M
 
 卡在了删除按钮那里，一开始想的是另外声明一个delete()，但出现btn.onclick =？？的传参问题
 
-还没想出解决办法。
+`还没想出解决办法。`
+
+# 
+
+# 
+
+# 	Pink JavaScript
+
+# 一、数据类型
+
+> 目标
+
+##### 说出五种简单数据类型
+
+##### 使用typeof获取变量类型
+
+##### 说出一两种转换为数值类型的方法
+
+##### 说出一两种转换为字符型的方法
+
+##### 什么是隐式转换
+
+
+
+
+
+## 1、Number
+
+
+
+## 2、String
+
+在字符串中要使用单引号或者双引号，要" ' ' "配合使用
+
+## 3、Boolean
+
+
+
+## 4、Undefined,Null
+
+
+
+```javascript
+undefined+"xxx"//underfinedxxx
+undefined+1 //NaN
+
+
+null+"xxx"  //nullxxx
+null+1  //1
+```
+
+## 5、判断数据类型
+
+记住一个
+
+```javascript
+var aaa=null;
+typeof aaa //object 而不是null
+```
+
+## 6、数据类型转换
+
+### 6.1、转换为字符串
+
+toString()
+
+String()强制转换
+
+加号拼接''       也叫隐式转换
+
+### 6.2、转换为数字型
+
+parseInt(String)
+
+parseFloat(String)
+
+Number()
+
+隐式转换（用运算符 -  *  /）  '12'-0  就把字符串12变成数字型
+
+### 6.3、转换为布尔型
+
+Boolean()
+
