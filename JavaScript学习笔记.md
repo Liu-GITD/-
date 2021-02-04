@@ -475,9 +475,9 @@ var aaa = {
 aaa.b();//调用，this指向aaa对象
 ```
 
-# 
+#  
 
-# 
+#  
 
 # 百度学院作业：
 
@@ -663,9 +663,9 @@ https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/M
 
 `还没想出解决办法。`
 
-# 
+#   
 
-# 
+#  
 
 # 	Pink JavaScript
 
@@ -696,6 +696,22 @@ https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/M
 在字符串中要使用单引号或者双引号，要" ' ' "配合使用
 
 ## 3、Boolean
+
+#### 逻辑与的短路运算
+
+表达式1&&表达式2  当表达式1的结果为真 则返回表达式2，否则返回1
+
+#### 逻辑或的短路运算
+
+如果表达式1为真则返回1，否则为2
+
+> 返回前面的表达式时，后面的表达式是不会执行的
+
+```javascript
+var num=0
+console.log(111||num++);
+console.log(num)//是0不是1
+```
 
 
 

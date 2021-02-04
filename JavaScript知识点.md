@@ -192,3 +192,41 @@ var bar=obj.foo;
 bar();
 ```
 
+# 5、innerText和textContent的区别(兼容问题的处理)
+
+1、设置标签中的文本内容,应该使用textContent属性,谷歌,火狐支持,IE8不支持
+2、设置标签中的文本内容,应该使用innerText属性,谷歌,火狐,IE8都支持
+3、如果这个属性在浏览器中不支持,那么这个属性的类型是undefined
+4、判断这个属性的类型 是不是undefined,就知道浏览器是否支持
+
+```javascript
+  function setInnerText(element, text) {
+        //判断浏览器是否支持这个属性
+        if (typeof element.textContent == "undefined") {//不支持
+            element.innerText = text;
+        } else {//支持这个属性
+            element.textContent = text;
+        }
+    };
+```
+
+1. innerHTML主要的作用是在标签中设置新的html标签内容,是有标签效果的
+
+```html
+<body>
+<input type="button" value="按钮" id="btn">
+<div id="dv">
+    <p>这是一个p</p>
+</div>
+<script>
+    document.getElementById("btn").onclick = function () {
+        //可以获取标签中的文本内容
+        console.log(document.getElementById("dv").innerHTML);
+    };
+</script>
+</body>
+```
+
+![image-20210204212244922](C:\Users\78535\AppData\Roaming\Typora\typora-user-images\image-20210204212244922.png)
+
+可以在特定id标签内再新增标签，不只是文本
